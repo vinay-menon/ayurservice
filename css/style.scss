@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:400,700,900');
+
+* {
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
+	}
+
+html {
+	background-image: url(../images/assets/main-bg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	}
+
+body {
+    max-width: 1200px;
+    margin: auto;
+	font-family: 'Yantramanav', sans-serif;
+	}
+
+.main-header {
+	padding: 24px;
+	background-color: rgba(34, 51, 135, 0.252);
+	display: flex;
+	position: relative;
+	}
+
+.logo {
+	background-color: teal;
+	height: 80px;
+	width: 200px;
+	border-radius: 10px;
+	}
+
+.main-nav {
+	display: flex;
+	margin-left: auto;
+	align-items: center;
+	
+	a {
+		width: 200px;
+		padding: 0 20px 10px;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		opacity: .8;
+		transition: .5s;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0; right: 0;
+			margin: auto;
+			height: 4px;
+			width: 80%;
+			border-radius: 2px;
+			background-color: #fff;
+			}
+
+		&:hover {
+			opacity: 1;
+
+			&:after {
+				background-color: rgb(255, 241, 181);
+				}
+			}
+		
+		+ a {
+			margin-left: 32px;
+			}
+
+		.title {
+			margin-bottom: 4px;
+			font-size: 1.2rem;
+			font-weight: bold;
+			}
+
+		.title + p {
+			font-size: .8rem;
+			}
+		}
+	}
+
+.slider {
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+	}
+
+.slider-content {
+	margin: auto;
+	margin-right: 0;
+	display: flex;
+	flex-direction: column;
+	}
+.slider-title {
+	font-family: 'Playfair Display', serif;
+	font-weight: bold;
+	color: rgb(255, 241, 181);
+	font-size: 3rem;
+	margin-bottom: 24px;
+	// font-style: italic;
+	}
+
+.slider-text {
+	font-size: .9rem;
+	line-height: 1.8;
+	color: rgb(233, 233, 233);
+	}
+
+.slider-text div {
+	background-color: navajowhite;
+	}
+
+.filler-text {
+	max-width: 500px;
+	}
+.filler-text div {
+	display: inline-block;
+	width: 120px;
+	height: 12px;
+	border-radius: 6px;
+	background-color: navajowhite;
+	
+	&:nth-child(2) {
+		width: 50px;
+		}
+	&:nth-child(3) {
+		width: 10px;
+		}
+	&:nth-child(4) {
+		width: 80px;
+		}
+	&:nth-child(5) {
+		width: 20px;
+		}
+	&:nth-child(6) {
+		width: 40px;
+		}
+	&:nth-child(7) {
+		width: 70px;
+		}
+	&:nth-child(8) {
+		width: 20px;
+		}
+	&:nth-child(9) {
+		width: 120px;
+		}
+	&:nth-child(10) {
+		width: 60px;
+		}
+	&:nth-child(11) {
+		width: 10px;
+		}
+	&:last-child {
+		width: 100px;
+		}
+	}
+
+.floating-contact {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	padding: 12px;
+	padding-bottom: 24px;
+	}
+
+.fl-contact-item {
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	// font-size: .9rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	width: 200px;
+	background-color: rgba(60, 82, 189, 0.755);
+	border-radius: 22px;
+	}
+
+.main-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 24px;
+
+	background-color: #fff;
+	}
+
+.services,
+.intro {
+	width: calc(50% - 24px);
+	}
+
+.services {
+	display: flex;
+	flex-direction: column;
+	}
+
+.services-item + .services-item {
+	margin-top: 48px;
+	}
+
+.services-thumb {
+	height: 120px;
+	width: 120px;
+	background-color: teal;
+	float: left;
+	margin-right: 24px;
+	}
+
+.services-title {
+	font-weight: 900;
+	font-size: 1.2rem;
+	color: rgb(60, 82, 189);
+	margin-bottom: 12px;
+	}
+
+.services-text {
+	font-size: .8rem;
+	line-height: 1.4;
+	color: #222;
+	}
+
+.services-title,
+.services-text {
+	overflow: hidden;
+	}
+
+.intro {
+	background-color: navajowhite;
+	
+	.filler-text div {
+		background-color: teal;
+		}
+	}
+
+.intro-image {
+	height: 120px;
+	background-color: teal;
+	margin-bottom: 24px;
+	}
+
+.intro-content {
+	display: flex;
+	flex-direction: column;
+	padding: 0 24px;
+	}
+
+.intro-text {
+	margin-bottom: 24px;
+	}
+
+.intro-link {
+	height: 30px;
+	width: 120px;
+	background-color: teal;
+	margin-left: auto;
+	border-radius: 15px;
+	}
+
+.main-footer {
+	height: 120px;
+	background-color: #222;
+	}
