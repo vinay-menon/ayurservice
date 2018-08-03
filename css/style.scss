@@ -20,6 +20,15 @@ body {
 	font-family: 'Yantramanav', sans-serif;
 	}
 
+.more-link {
+	padding: 5px 30px;
+	background-color: rgb(6, 78, 150);
+	align-self: center;
+	color: white;
+	text-decoration: none;
+	border-radius: 50px;
+	}
+
 .main-header {
 	padding: 24px;
 	background-color: rgba(34, 51, 135, 0.252);
@@ -205,8 +214,8 @@ body {
 	flex-direction: column;
 	}
 
-.services-item + .services-item {
-	margin-top: 48px;
+.services-item {
+	margin-bottom: 48px;
 	}
 
 .services-thumb {
