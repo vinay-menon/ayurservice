@@ -75,6 +75,7 @@ h1 {
 }
 
 .logo {
+  display: block;
   background-color: teal;
   height: 80px;
   width: 200px;
@@ -322,6 +323,7 @@ h1 {
           flex: 1;
   -webkit-box-shadow: -30px 0 30px rgba(23, 23, 24, 0.837);
           box-shadow: -30px 0 30px rgba(23, 23, 24, 0.837);
+  padding-bottom: 128px;
 }
 
 .content-header {
@@ -380,7 +382,7 @@ h1 {
   margin-bottom: 48px;
 }
 
-.services-thumb {
+.services-image {
   height: 120px;
   width: 120px;
   background-color: teal;
@@ -404,6 +406,28 @@ h1 {
 .services-title,
 .services-text {
   overflow: hidden;
+}
+
+.services-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 24px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.services-thumb {
+  width: calc(33.333% - 12px);
+  background-color: teal;
+  margin-bottom: 24px;
+  margin-right: 12px;
+}
+
+.services-thumb img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
 }
 
 .intro {
