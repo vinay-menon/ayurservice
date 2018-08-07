@@ -383,11 +383,15 @@ h1 {
 }
 
 .services-image {
-  height: 120px;
   width: 120px;
-  background-color: teal;
   float: left;
   margin-right: 24px;
+  padding: 5px;
+}
+
+.services-image img {
+  width: 100%;
+  max-width: 100%;
 }
 
 .services-title {
