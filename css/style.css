@@ -362,6 +362,10 @@ h1 {
   width: calc(50% - 24px);
 }
 
+.secondary-page .services {
+  width: 100%;
+}
+
 .services {
   display: -webkit-box;
   display: -ms-flexbox;
