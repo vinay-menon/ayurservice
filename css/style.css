@@ -88,17 +88,15 @@ h1 {
           flex-direction: column;
   border-radius: 10px;
   text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  max-width: 200px;
   text-decoration: none;
-  color: #f3f0cb;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
 }
 
 .logo span {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  font-weight: bold;
+  display: none;
 }
 
 .logo img {
@@ -107,6 +105,8 @@ h1 {
       align-self: center;
   margin-right: 0;
   margin-bottom: 4px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .secondary-page .logo {

@@ -73,20 +73,22 @@ h1 {
 	flex-direction: column;
 	border-radius: 10px;
 	text-align: center;
-	flex: 1;
+	max-width: 200px;
 	text-decoration: none;
-	color: rgb(243, 240, 203);
+	color: rgb(255, 255, 255);
+	font-family: 'Playfair Display', serif;
+	font-size: 1.4rem;
 
 	span {
-		font-family: 'Playfair Display', serif;
-		font-size: 1.4rem;
-		font-weight: bold;
-		}
+		display: none;
+	}
 
 	img {
 		align-self: center;
 		margin-right: 0;
 		margin-bottom: 4px;
+		width: 100%;
+		max-width: 100%;
 		}
 	}
 
