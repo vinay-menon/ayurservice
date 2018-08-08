@@ -75,9 +75,13 @@ h1 {
 	text-align: center;
 	max-width: 200px;
 	text-decoration: none;
-	color: rgb(255, 255, 255);
-	font-family: 'Playfair Display', serif;
-	font-size: 1.4rem;
+
+	&.logo--big {
+		width: 100%;
+		max-width: 320px;
+		margin: auto 0;
+		align-self: flex-start;
+		}
 
 	span {
 		display: none;
@@ -98,7 +102,7 @@ h1 {
 
 .main-nav {
 	display: flex;
-	margin-left: auto;
+	margin: 0 auto;
 	align-items: center;
 	
 	a {
@@ -174,7 +178,6 @@ h1 {
 .slider {
 	height: 400px;
 	display: flex;
-	flex-direction: column;
 	padding: 24px;
 	}
 
