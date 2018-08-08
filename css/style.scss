@@ -59,17 +59,35 @@ h1 {
 
 .main-header {
 	padding: 24px;
-	background-color: rgba(34, 51, 135, 0.252);
+	background-color: rgba(19, 32, 95, 0.442);
 	display: flex;
 	position: relative;
 	}
 
+.secondary-page .main-header {
+	padding: 48px 24px 128px;
+	}
+
 .logo {
-	display: block;
-	background-color: teal;
-	height: 80px;
-	width: 200px;
+	display: flex;
+	flex-direction: column;
 	border-radius: 10px;
+	text-align: center;
+	flex: 1;
+	text-decoration: none;
+	color: rgb(243, 240, 203);
+
+	span {
+		font-family: 'Playfair Display', serif;
+		font-size: 1.4rem;
+		font-weight: bold;
+		}
+
+	img {
+		align-self: center;
+		margin-right: 0;
+		margin-bottom: 4px;
+		}
 	}
 
 .secondary-page .logo {
@@ -322,8 +340,7 @@ h1 {
 .services-image {
 	width: 120px;
 	float: left;
-	margin-right: 24px;
-	padding: 5px;
+	padding: 0 24px;
 
 	img {
 		width: 100%;
@@ -410,6 +427,10 @@ h1 {
 .main-footer {
 	height: 120px;
 	background-color: #222;
+	}
+
+.reg-content {
+	width: 100%;
 	}
 
 .reg-form {

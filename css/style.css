@@ -67,19 +67,46 @@ h1 {
 
 .main-header {
   padding: 24px;
-  background-color: rgba(34, 51, 135, 0.252);
+  background-color: rgba(19, 32, 95, 0.442);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
 }
 
+.secondary-page .main-header {
+  padding: 48px 24px 128px;
+}
+
 .logo {
-  display: block;
-  background-color: teal;
-  height: 80px;
-  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-radius: 10px;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-decoration: none;
+  color: #f3f0cb;
+}
+
+.logo span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.logo img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 0;
+  margin-bottom: 4px;
 }
 
 .secondary-page .logo {
@@ -385,8 +412,7 @@ h1 {
 .services-image {
   width: 120px;
   float: left;
-  margin-right: 24px;
-  padding: 5px;
+  padding: 0 24px;
 }
 
 .services-image img {
@@ -481,6 +507,10 @@ h1 {
 .main-footer {
   height: 120px;
   background-color: #222;
+}
+
+.reg-content {
+  width: 100%;
 }
 
 .reg-form {
