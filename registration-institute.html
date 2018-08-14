@@ -17,8 +17,8 @@
                 </span>
             </a>
             <nav class="main-nav">
-                <a href="#">
-                    <div class="title ico-arrow-dwn">Register</div>
+                <a href="registration.html">
+                    <div class="title">Register</div>
                     <p>Recieve details and alerts.</p>
                 </a>
                 <a href="services.html">
@@ -42,7 +42,7 @@
             <h1>
                 <span>Registration</span>
             </h1>
-            <h2>For Job Seekers</h2>
+            <h2>For Institutions</h2>
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore blanditiis qui necessitatibus suscipit sapiente quam? Sunt minima, optio illum voluptates numquam voluptate ex exercitationem impedit assumenda distinctio voluptatibus culpa. Distinctio.
             </p>
@@ -51,94 +51,86 @@
         <form class="reg-form">
             <label>
                 <div class="label-text">
-                    Name of Candiddate
+                    Name of Establishment
                 </div>
                 <input type="text">
             </label>
             <label>
                 <div class="label-text">
-                    Permanent Address
+                    Nature of Establishment
+                </div>
+				<select id="" name="" class="required">
+					<option value="">Please select...</option>
+					<option value="" class="">Hospital</option>
+					<option value="" class="">Resort</option>
+					<option value="" class="">Spa attached to Hotel</option>
+					<option value="" class="">Independent Spa</option>
+				</select>
+            </label>
+            <label>
+                <div class="label-text">
+                    Name of Head of Establishment
                 </div>
                 <input type="text">
             </label>
             <label>
                 <div class="label-text">
-                    Contact Address
+                    Name of Owner / Proprietor
                 </div>
                 <input type="text">
             </label>
             <label>
                 <div class="label-text">
-                    Landline
+                    Do you have an Ayurveda Doctor in your Establishment?
                 </div>
-                <input type="text">
+				<div class='binary'>
+					<label class="" id="" for="">
+						<input type="radio" value="" class="" id="" name="">
+						Yes
+					</label>					
+					
+					<label class="" id="" for="">					
+						<input type="radio" value="" class="" id="" name="">
+						No
+					</label>
+				</div>
             </label>
             <label>
                 <div class="label-text">
-                    Mobile
+                    Do you provide accommodation and food?
                 </div>
-                <input type="text">
+				<div class='binary'>
+					<label class="" id="" for="">
+						<input type="radio" value="" class="switch-a" id="" name="">
+						Yes
+					</label>					
+					<label class="" id="" for="">
+						<input type="radio" value="" class="" id="" name="">
+						No
+					</label>
+				</div>
             </label>
             <label>
                 <div class="label-text">
-                    Gender
+                    In case you provide accommodation please specify the location; whether in the premises of the establishment or not. If not please inform how far away the accommodation is located.
                 </div>
-                <input type="text">
+                <textarea></textarea>
             </label>
-            <label>
+            <div class="label">
                 <div class="label-text">
-                    Date of birth
+                    In case of couples, can you provide them accommodation together?
                 </div>
-                <input type="text">
-            </label>
-            <label>
-                <div class="label-text">
-                    Marital status
-                </div>
-                <input type="text">
-            </label>
-            <label>
-                <div class="label-text">
-                    Name of Parent/Guardian
-                </div>
-                <input type="text">
-            </label>
-            <label>
-                <div class="label-text">
-                    Nature of relationship
-                </div>
-                <input type="text">
-            </label>
-            <label>
-                <div class="label-text">
-                    Name &amp; Address of Institution from which Qualified
-                </div>
-                <input type="text">
-            </label>
-            <label>
-                <div class="label-text">
-                    Working Experience
-                </div>
-                <input type="text">
-            </label>
-            <label>
-                <div class="label-text">
-                    Nature of Establishment you wish to work in
-                </div>
-                <input type="text">
-            </label>
-            <label>
-                <div class="label-text">
-                    Salary Expected
-                </div>
-                <input type="text">
-            </label>
-            <label>
-                <div class="label-text">
-                    Placement you prefer
-                </div>
-                <input type="text">
-            </label>
+				<div class='binary'>
+					<label class="" id="" for="">
+						<input type="radio" value="" class="switch-a" id="" name="">
+						Yes
+					</label>					
+					<label class="" id="" for="">
+						<input type="radio" value="" class="" id="" name="">
+						No
+					</label>
+				</div>
+            </div>
 
             <button type="submit">
                 Submit
