@@ -258,6 +258,11 @@ h1 {
 .secondary-page .main-nav {
 	flex-direction: column;
 	}
+	@media (max-width: 930px) {
+		.secondary-page .main-header {
+			flex-direction: row;
+			}
+		}
 	
 .secondary-page .main-nav {
 	flex-direction: column;
@@ -266,7 +271,7 @@ h1 {
 
 	a + a {
 		margin-left: 0;
-		margin-bottom: 48px;
+		margin-top: 48px;
 		}
 	}
 	
@@ -297,7 +302,17 @@ body.mob-menu .main-nav {
 	border-radius: 5px;
 	margin: auto;
 	cursor: pointer;
+	display: none;
 	}
+.secondary-page .main-nav-trigger {
+	margin: 0 0 0 0;
+	margin-left: auto;
+	}
+	@media (max-width: 930px) {
+		.main-nav-trigger {
+			display: block;
+			}
+		}
 
 body.mob-menu .main-nav-trigger {
 	position: fixed;

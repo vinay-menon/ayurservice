@@ -315,6 +315,15 @@ h1 {
           flex-direction: column;
 }
 
+@media (max-width: 930px) {
+  .secondary-page .main-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .secondary-page .main-nav {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -326,7 +335,7 @@ h1 {
 
 .secondary-page .main-nav a + a {
   margin-left: 0;
-  margin-bottom: 48px;
+  margin-top: 48px;
 }
 
 body.mob-menu .main-nav {
@@ -363,6 +372,18 @@ body.mob-menu .main-nav a + a {
   border-radius: 5px;
   margin: auto;
   cursor: pointer;
+  display: none;
+}
+
+.secondary-page .main-nav-trigger {
+  margin: 0 0 0 0;
+  margin-left: auto;
+}
+
+@media (max-width: 930px) {
+  .main-nav-trigger {
+    display: block;
+  }
 }
 
 body.mob-menu .main-nav-trigger {
