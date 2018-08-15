@@ -25,6 +25,9 @@ body {
 body.secondary-page {
     max-width: 1200px;
 	}
+body.mob-menu {
+	overflow: hidden;
+	}
 
 h1, h2 {
 	margin-bottom: 24px;
@@ -40,13 +43,12 @@ h1 {
 
 [class*="ico-"] {
 	position: relative;
-	padding-left: 32px!important;
+	padding-left: 40px!important;
 
 	&:before {
 		content: '';
 		position: absolute;
 		left: 0; top: 0;
-		margin-right: 8px;
 		display: inline-block;
 		width: 48px;
 		height: 100%;
@@ -61,6 +63,18 @@ h1 {
 	}
 .ico-msg:before {
 	background-image: url(../images/assets/icons/ico-msg.png);
+	}
+.ico-menu:before {
+	background-image: url(../images/assets/icons/ico-menu.png);
+	}
+.ico-close {
+	padding-left: 24px!important;
+	}
+.ico-close:before {
+	background-size: 6px auto;
+	width: 24px;
+	margin-right: 0;
+	background-image: url(../images/assets/icons/ico-close.png);
 	}
 
 .secondary-page {
@@ -252,8 +266,43 @@ h1 {
 
 	a + a {
 		margin-left: 0;
+		margin-bottom: 48px;
+		}
+	}
+	
+body.mob-menu .main-nav {
+	position: fixed;
+	top: 0; right: 0;
+	left: 0; bottom: 0;
+	display: flex;
+	flex-direction: column;
+	padding: 48px;
+	height: 100%;
+	width: 100%;
+	z-index: 9999;
+	background: rgba(0, 0, 0, 0.918);
+	overflow: auto;
+
+	a + a {
+		margin-left: 0;
 		margin-top: 48px;
 		}
+	}
+
+.main-nav-trigger {
+	background-color: rgba(58, 70, 133, 0.905);
+	border: 0;
+	color:rgb(235, 235, 235);
+	padding: 10px;
+	border-radius: 5px;
+	margin: auto;
+	cursor: pointer;
+	}
+
+body.mob-menu .main-nav-trigger {
+	position: fixed;
+	top: 12px; right: 12px;
+	z-index: 99999;
 	}
 
 .slider {
@@ -376,13 +425,18 @@ h1 {
 
 .floating-contact {
 	width: 100%;
-	display: flex;
-	justify-content: space-around;
 	padding: 12px;
-	padding-bottom: 24px;
+	background-color: rgba(6, 78, 150, 0.721);
+
+	.inner-wrapper {
+		display: flex;
+		// justify-content: center;
+		max-width: 1200px;
+		margin: auto;
+		}
 	}
-	@media(max-width: 700px) {
-		.floating-contact {
+	@media(max-width: 530px) {
+		.inner-wrapper {
 			flex-direction: column;
 			}
 		}
@@ -395,19 +449,26 @@ h1 {
 	text-align: center;
 	font-weight: bold;
 	letter-spacing: 1px;
-	width: 200px;
-	background-color: rgba(6, 78, 150, 0.721);
-	border-radius: 22px;
+	background-color: rgba(41, 15, 15, 0.5);
+	border-left: 5px solid rgba(255, 255, 255, 0.524);
 
-	&.ico-msg {
-		box-shadow: 0 0 10px 
-		rgba(108, 255, 86, 0.707);
+	&:hover {
+		background-color: rgba(67, 137, 216, 0.571);
+		}
+
+	+ .fl-contact-item {
+		margin-left: 12px;
 		}
 	}
-	@media(max-width: 700px) {
+	@media(max-width: 530px) {
 		.fl-contact-item {
 			margin: 0 auto;
-			margin-bottom: 24px;
+
+			+ .fl-contact-item {
+				margin-left: auto;
+				margin-top: 12px;
+				border-left: 0;
+				}
 			}
 		}
 
@@ -470,6 +531,10 @@ h1 {
 				background-color: rgb(236, 134, 25);
 				}
 			}
+		}
+
+	p + p {
+		margin-top: 24px;
 		}
 	}
 
