@@ -99,6 +99,13 @@ h1 {
 			position: relative;
 			top: auto;
 			margin: 0;
+			width: 100%;
+			display: flex;
+			}
+		}
+	@media (max-width: 490px) {
+		.sticky-content--top {
+			// flex-direction: column;
 			}
 		}
 
@@ -145,6 +152,7 @@ h1 {
 	@media (max-width: 930px) {
 		.secondary-page .main-header {
 			padding: 12px 24px 12px;
+			// flex-wrap: wrap;
 			}
 		}
 
@@ -183,7 +191,7 @@ h1 {
 		}
 
 .secondary-page .logo {
-	margin-bottom: 48px;
+	margin-bottom: 24px;
 	}
 	@media (max-width: 930px) {
 		.secondary-page .logo {
@@ -305,8 +313,8 @@ body.mob-menu .main-nav {
 	display: none;
 	}
 .secondary-page .main-nav-trigger {
-	margin: 0 0 0 0;
-	margin-left: auto;
+	margin: auto 0 auto auto;
+	align-self: flex-end;
 	}
 	@media (max-width: 930px) {
 		.main-nav-trigger {
@@ -456,6 +464,31 @@ body.mob-menu .main-nav-trigger {
 			}
 		}
 
+.secondary-page .floating-contact {
+	margin-bottom: 24px;
+	width: auto;
+	}
+.secondary-page .inner-wrapper {
+	flex-direction: column;
+	}
+	@media (max-width: 930px) {
+		.secondary-page .floating-contact {
+			margin-bottom: 0;
+			align-self: flex-start;
+			margin: auto;
+			border-radius: 10px;
+			padding: 12px 16px;
+			}
+		.secondary-page .inner-wrapper {
+			flex-direction: row;
+			}
+		}
+	@media (max-width: 600px) {
+		.secondary-page .floating-contact {
+			display: none;
+			}
+		}
+
 .fl-contact-item {
 	display: flex;
 	justify-content: center;
@@ -487,11 +520,41 @@ body.mob-menu .main-nav-trigger {
 			}
 		}
 
+.secondary-page .fl-contact-item {
+	font-size: .8rem;
+	font-weight: normal;
+	padding: 5px;
+
+	&[class*="ico-"] {
+		padding-left: 24px!important;
+
+		&:before {
+			width: 24px;
+			background-size: 12px auto;
+			}
+		}
+
+	+ .fl-contact-item {
+		margin-left: 0;
+		margin-top: 12px;
+		}
+	}
+	@media (max-width: 930px) {
+		.secondary-page .fl-contact-item + .fl-contact-item {
+			margin-left: 24px;
+			margin-top: 0;
+			}
+		}
+
 .main-content {
 	padding: 24px;
 
 	background-color: rgb(255, 254, 240);
 	border-left: 1px solid white;
+
+	p {
+		margin-bottom: 24px;
+		}
 	}
 .main-content,
 .intro-wrapper {
@@ -513,7 +576,6 @@ body.mob-menu .main-nav-trigger {
 	}
 
 .content-header {
-	margin-bottom: 48px;
 	width: 100%;
 	
 	h1 {
@@ -548,10 +610,50 @@ body.mob-menu .main-nav-trigger {
 			}
 		}
 
-	p + p {
+	p:last-child {
+		margin-bottom: 48px;
+		}
+	}
+
+.about-map {
+	width: 100%;
+	max-width: 100%;
+	border: 0;
+	min-height: 400px;
+	margin-bottom: 24px;
+	}
+
+.contact-info {
+	display: flex;
+	font-size: 1.2rem;
+	}
+	@media (max-width:466px) {
+		.contact-info {
+			flex-direction: column;
+			}
+		}
+
+.contact-item {
+	+ .contact-item  {
+		margin-left: 48px;
+		padding-left: 48px;
+		border-left: 1px solid;
+		}
+
+	div + div {
 		margin-top: 24px;
 		}
 	}
+	@media (max-width: 466px) {
+		.contact-item + .contact-item  {
+			margin-left: 0;
+			margin-top: 48px;
+			padding-left: 0;
+			padding-top: 48px;
+			border-left: 0;
+			border-top: 1px solid;
+			}
+		}
 
 .services,
 .intro {
@@ -709,6 +811,8 @@ body.mob-menu .main-nav-trigger {
 		
 		.label-text {
 			width: 250px;
+			text-align: right;
+			padding-right: 12px;
 			}
 		[type=text],
 		select,
@@ -744,11 +848,6 @@ body.mob-menu .main-nav-trigger {
 			background-color: rgba(0, 0, 0, 0.156);
 			border-bottom: 0;
 			}
-		
-		.label-text {
-			text-align: right;
-			padding-right: 12px;
-			}
 		}
 	
 	button[type=submit] {
@@ -762,3 +861,45 @@ body.mob-menu .main-nav-trigger {
 		width: 120px;
 		}
 	}
+	@media (max-width: 620px) {
+		.reg-form {
+			label, .label {
+				padding: 24px 0;
+				}
+			}
+		}
+	@media (max-width: 742px) {
+		.reg-form {
+			label, .label {
+				.binary label {
+					min-width: 0;
+					width: auto;
+					padding: 10px;
+					margin: 0;
+					margin-right: 12px;
+					border-radius: 3px;
+					background-color: rgba(0, 0, 0, 0.156);
+					border-bottom: 0;
+					}
+				}
+			}
+		}
+	@media (max-width: 420px) {
+		.reg-form {
+			label, .label {
+				flex-direction: column;
+		
+				.label-text {
+					text-align: left;
+					width: 100%;
+					}
+					
+				.binary label {
+					min-width: auto;
+					width: auto;
+					display: flex;
+					flex-direction: row;
+					}
+				}
+			}
+		}
