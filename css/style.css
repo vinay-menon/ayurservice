@@ -41,6 +41,15 @@ h1 {
   margin-bottom: 48px;
 }
 
+ul {
+  padding-left: 24px;
+  margin-bottom: 48px;
+}
+
+li + li {
+  margin-top: 24px;
+}
+
 [class*="ico-"] {
   position: relative;
   padding-left: 40px !important;
@@ -805,7 +814,7 @@ body.mob-menu .main-nav-trigger {
 }
 
 .secondary-page .services-item {
-  margin-bottom: 128px;
+  margin-bottom: 56px;
 }
 
 .services-image {
@@ -827,7 +836,7 @@ body.mob-menu .main-nav-trigger {
 }
 
 .services-text {
-  font-size: .8rem;
+  font-size: .9rem;
   line-height: 1.4;
   color: #222;
 }
@@ -925,8 +934,15 @@ body.mob-menu .main-nav-trigger {
 }
 
 .main-footer {
-  height: 120px;
+  width: 100%;
+  padding: 60px 0;
   background-color: #222;
+  text-align: center;
+  color: #2496c7;
+}
+
+.main-footer a {
+  color: white;
 }
 
 .reg-content {
